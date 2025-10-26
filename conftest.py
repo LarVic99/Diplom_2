@@ -32,7 +32,7 @@ def user_generate_and_delete(delete_user):
     # Генерация данных пользователя и удаление пользователя
     user = UserLoginData.full_user_data # Данные пользователя
     delete_user.append(UserLoginData.login_data[0]) # добавляем в список для удаления
-    yield user # Передадим данные и подождем
+    return user # Передадим данные и подождем
 
 
 @pytest.fixture(scope='function')
